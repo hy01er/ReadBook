@@ -68,9 +68,10 @@
 ![书籍给人力量](./book.png "多读书读好书")
 
 如果你对图片的高度和位置有要求的话，只能使用html，在markdown里面也能识别。
-<img src="./book.png" width="50%" align="left"></BR></BR></BR></BR></BR>
+<img src="./book.png" width="50%" align="left">
 
-图床,简言之，就是把图片存在别人的或者自己的服务器上，然后用外链引用到markdown文件显示，如下
+  <p 图床,简言之，就是把图片存在别人的或者自己的服务器上，然后用外链引用到markdown文件显示，如下>
+
 ![book.png](https://tc.phpx.cn/uploads/2023/03/18/64151e1d8100d.png)
 
 
