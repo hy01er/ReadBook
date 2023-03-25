@@ -1,6 +1,6 @@
 # Git笔记
 Git可以用于文件版本管理,下图表示了Git管理文件的三种状态:
-![Git工作流](../Source/pic/skill_learning/git工作三种状态png.png)
+![Git工作流](../Source/pic/skill_learning/git工作三种状态.png)
 ## 修改与提交方法
 1. 修改拉取,提交,推送--日常工作三板斧
    (1) 拉代码,一般用`git clone + github 链接`
