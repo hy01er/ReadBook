@@ -21,4 +21,4 @@ Git中遇到的一些问题,进行记录并写出解决方案
 ### Git默认不识别大小写
 比如,我修改了文件名`skill`,修改为`Skill`,git不识别
 解决方案:
- git config core.ignorecase false
+ `git config core.ignorecase false`
