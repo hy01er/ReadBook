@@ -5,7 +5,7 @@
 ## 记录知识点
 一些Git的必备知识点
 ### 基础配置
-+ 我们安装好Git后,一般要进行Git的配置然后才能进行提交拉代码的一些操作,这些基础配置有什么呢?
+####我们安装好Git后,一般要进行Git的配置然后才能进行提交拉代码的一些操作,这些基础配置有什么呢?
 1. 设置用户名和邮箱(修改引号内的内容)
    (1) `git config --global user.name "username"`
    (2) `git config --global user.email "username@email.com"`
