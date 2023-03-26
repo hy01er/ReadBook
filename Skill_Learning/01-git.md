@@ -3,9 +3,13 @@ Git可以用于文件版本管理,下图表示了Git管理文件的三种状态:
 ![Git工作流](../Source/pic/skill_learning/git工作三种状态.png)
 ## 修改与提交方法
 1. 修改拉取,提交,推送--日常工作三板斧
+
    (1) 拉代码,一般用`git clone + github 链接`
+
    (2) 本地修改后,用`git add + 修改文件`
+
    (3) 提交修改:`git commit .` `git commit -m "XXX"` `git commit --amend`(amend用于追加)
+   
    (4) 推送到远端:`git push origin 本地分支名:远端分支名`(本地和远端均为master可以省略分支名)
 
 2. `cherry-pick`加某修改到你的修改上(commit id只需要前6位即可)
