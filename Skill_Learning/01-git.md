@@ -9,7 +9,7 @@ Git可以用于文件版本管理,下图表示了Git管理文件的三种状态:
    (2) 本地修改后,用`git add + 修改文件`
 
    (3) 提交修改:`git commit .` `git commit -m "XXX"` `git commit --amend`(amend用于追加)
-   
+
    (4) 推送到远端:`git push origin 本地分支名:远端分支名`(本地和远端均为master可以省略分支名)
 
 2. `cherry-pick`加某修改到你的修改上(commit id只需要前6位即可)
@@ -89,3 +89,6 @@ Git中遇到的一些问题,进行记录并写出解决方案
 
 解决方案:
  `git config core.ignorecase false`
+### git缩写命令
+示例：git config --global alias
+这条命令执行后，以后输入`git st`就能执行`git status`了，可以方便一些长命令的执行
