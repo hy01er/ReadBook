@@ -188,4 +188,4 @@ void func(..., data_t *var)
 书中经过减少内存的引用,CPE得到提升.
 
 ## 理解现代处理器
-![一个乱序处理器框图](../source/pic/csapp/5-11.png)
+![一个乱序处理器框图](../Source/pic/csapp/5-11.png)
