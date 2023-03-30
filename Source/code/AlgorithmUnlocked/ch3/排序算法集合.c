@@ -2,6 +2,7 @@
 
 #include "stdio.h"
 
+/*******************基础接口定义****************************************/
 #define SIZE_ARRAY(a) ((sizeof(a)) / (sizeof(a[0])))
 
 void print_int_array(int *a, int len)
@@ -27,12 +28,13 @@ void swap_int(int *a, int *b)
     return;
 }
 
+/*******************排序接口定义****************************************/
+
 // 定义排序接口类型
 typedef void (*Sort)(int *a, int len);
 Sort g_sortInterface = NULL;
 
-
-// 选择排序
+// 1. 选择排序
 /*
  * 伪代码:
  * 程序 SelectSort(int *a, int len)
@@ -67,7 +69,7 @@ void SelectSort(int *a, int len)
     return;
 }
 
-// 插入排序:和日常生活最贴近的排序算法
+// 2. 插入排序:和日常生活最贴近的排序算法
 /**
  * 伪代码:
  * 伪代码:
@@ -103,7 +105,7 @@ void InsertSort(int *a, int len)
     return;
 }
 
-
+// 3. 归并排序(分治算法,递归)
 int  main()
 {
     int a[] = {8, 22, 96, 47, 63, 88, 96, 5, -9, 999, 52};
