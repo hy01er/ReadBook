@@ -11,6 +11,10 @@
 
 记住,书中的精华要留下来!
 
+不要奢望去留住书中所有的细节,
+
+合上这本书,它要讲的核心记录下来就好!
+
 
 It's not a formality
 
@@ -23,3 +27,7 @@ If you don't write down the books you read, you'll soon forget them
 Whatever it is, write it down!
 
 Remember, the essence of the book stays!
+
+Don't expect to keep all the details in the book,
+
+Close the book and write down what it's about
