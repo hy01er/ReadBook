@@ -30,4 +30,4 @@ Remember, the essence of the book stays!
 
 Don't expect to keep all the details in the book,
 
-Close the book and write down what it's about
+Close the book and write down what it's about!
