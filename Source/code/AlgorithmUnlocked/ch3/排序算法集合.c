@@ -1,6 +1,8 @@
 // ch3 排序算法
 
 #include "stdio.h"
+#include "stdlib.h"
+#include "time.h"
 
 /*******************基础接口定义****************************************/
 #define SIZE_ARRAY(a) ((sizeof(a)) / (sizeof(a[0])))
@@ -166,6 +168,11 @@ void quick_sort(int *a, int p, int r);
 
 int position(int *a, int p, int r)
 {
+    srand((unsigned int)time(NULL));
+    int key = rand() % (r - p + 1) + p;
+    if (key >= p && key <= r) {
+        swap_int(&a[key], &a[r]);
+    }
     int q = p; // q前是小于,后面是大于
     for (int u = p; u <= r - 1; u++) {
         if (a[u] <= a[r]) {
