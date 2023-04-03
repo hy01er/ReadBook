@@ -3,6 +3,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "time.h"
+#include "string.h"
 
 /*******************基础接口定义****************************************/
 #define SIZE_ARRAY(a) ((sizeof(a)) / (sizeof(a[0])))
@@ -193,7 +194,7 @@ void quick_sort(int *a, int p, int r)
     quick_sort(a, q + 1, r);
 }
 
-// 5.二分查找
+// 二分查找
 #define NOT_FIND -1
 int binary_find(int *a, int len, int x)
 {
@@ -213,16 +214,89 @@ int binary_find(int *a, int len, int x)
     return NOT_FIND;
 }
 
+// 5.计数排序
+// 严重缺陷,负数,后续改进
+void equal(int *a, int n, int m, int *equal)
+{
+    if (a== NULL || n <=1 || equal == NULL) {
+        return;
+    }
+
+    for (int i = 0; i < m; i++) {
+        equal[i] = 0;
+    }
+
+    for (int i = 0; i < n; i++) {
+        int index = a[i];
+        equal[index]++;
+    }
+    return;
+}
+
+void less(int *equal, int m, int *less)
+{
+    if (equal == NULL || m <= 0 || less == NULL) {
+        return;
+    }
+    less[0] =0;
+    for (int i = 1; i < m; i++) {
+        less[i] = less[i - 1] + equal[i - 1];
+    }
+    return;
+}
+
+void rearrange(int *a, int *less, int n, int m, int *b)
+{
+    if (a == NULL || m <= 0 || m <= 0 || less == NULL) {
+        return;
+    }
+    int next[m];
+    memset(next, 0, m);
+    for (int  i = 0; i < m; i++) {
+        next[i] = less[i] + 1;
+    }
+    memset(b, 0, n);
+    for (int i = 0; i < n; i++) {
+        int key = a[i];
+        int index = next[key];
+        b[index] = a[i];
+        next[key]++;
+    }
+    return;
+}
+
+void count_sort(int *a, int n)
+{
+    if (a == 0 || n <= 1) {
+        return;
+    }
+    int max = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] > max) {
+            max = a[i];
+        }
+    }
+    int equal1[max], less1[max];
+    int b[n];
+    equal(a, n, max, equal1);
+    less(equal1, max, less1);
+    rearrange(a, less1, n, max, b);
+    for (int i = 0; i < n; i++) {
+        a[i] = b[i];
+    }
+    return;
+}
+
+// 6.基数排序
+// 为多重计数排序, 代码实现略,后续实现
+
+
 int  main()
 {
-    int a[] = {8, 22, 96, 47, 63, 88, 96, 5, -9, 999, 52, 354,-444, 87394, 66};
-    int arrayLen = SIZE_ARRAY(a);
-    sort_r sort = quick_sort;
-    sort(a, 0, arrayLen - 1);
-    print_int_array(a, arrayLen);
-
-    int findNum = 999;
-    int findIndex = binary_find(a, arrayLen, findNum);
-    printf("\n\nfind %d index is %d\n\n", findNum, findIndex);
+    int b[] = {5, 4, 3, 4, 3, 6, 2, 8, 3, 9};
+    int arrayLen = SIZE_ARRAY(b);
+    Sort sort = count_sort;
+    sort(b, arrayLen);
+    print_int_array(b, arrayLen);
     return 0;
 }

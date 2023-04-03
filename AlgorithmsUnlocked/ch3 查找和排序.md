@@ -52,7 +52,7 @@ int binary_search(int *a, int len, int x)
 void selection_sort(int *a, int len)
 // 输入:略(数组 & 数组长度)
 // 输出:排序好的数组
-1. 令i从0..n-2取值
+1. 令i从1..n-2取值
     A.smallest赋值成i
     B.令j从i..(n-1)取值
         i.若a[j] < a[smallest], smallest赋值成j
@@ -65,7 +65,7 @@ void insert_sort(int *a, int len)
 // 输入:略(数组 & 数组长度)
 // 输出:排序好的数组
 
-1. 令i从2..(n-1)依次取值
+1. 令i从1..(n-1)依次取值
     A. key赋值为a[i], j赋值成i-1
     // 这里尤其注意需要(j>=0 && a[j]>key)同时成立,否则影响插入的位置
     B. 当j>=0同时a[j]>key时:
