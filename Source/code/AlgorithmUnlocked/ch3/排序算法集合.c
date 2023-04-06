@@ -135,7 +135,7 @@ void merge(int *a, int p, int q, int r)
         }
     }
     b[n1] = MOST_NUMBER;
-    c[n1] = MOST_NUMBER;
+    c[n2] = MOST_NUMBER;
     bIndex = 0;
     cIndex = 0;
     for (int i = p; i <= r; i++) {
@@ -293,10 +293,10 @@ void count_sort(int *a, int n)
 
 int  main()
 {
-    int b[] = {5, 4, 3, 4, 3, 6, 2, 8, 3, 9};
+    int b[] = {566, 999,23, 12, 526, -52, -96, 85, -446, 96586};
     int arrayLen = SIZE_ARRAY(b);
-    Sort sort = count_sort;
-    sort(b, arrayLen);
+    sort_r sort = merge_sort;
+    sort(b, 0, arrayLen - 1);
     print_int_array(b, arrayLen);
     return 0;
 }
