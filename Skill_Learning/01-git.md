@@ -90,5 +90,5 @@ Git中遇到的一些问题,进行记录并写出解决方案
 解决方案:
  `git config core.ignorecase false`
 ### git缩写命令
-示例：git config --global alias
+示例：git config --global alias.st status
 这条命令执行后，以后输入`git st`就能执行`git status`了，可以方便一些长命令的执行
