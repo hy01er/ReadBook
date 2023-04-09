@@ -92,3 +92,9 @@ Git中遇到的一些问题,进行记录并写出解决方案
 ### git缩写命令
 示例：git config --global alias.st status
 这条命令执行后，以后输入`git st`就能执行`git status`了，可以方便一些长命令的执行
+
+### 关于gitgnore文件
+.gitgnore文件是要写哪些文件是不需要git管理的
+temp/  忽略本目录和子目录的temp/目录下的所有文件
+/temp  忽略本目录的temp文件夹
+
