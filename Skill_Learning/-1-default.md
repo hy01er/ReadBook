@@ -21,3 +21,5 @@ jdk生成jre步骤：cmd进入jdk目录,输入命令：`bin\jlink.exe --module-p
 3. PATH
    变量名：Path
 　 变量值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+
+## vim基本配置
