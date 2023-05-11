@@ -25,4 +25,4 @@ jdk生成jre步骤：cmd进入jdk目录,输入命令：`bin\jlink.exe --module-p
 ## vim基本配置
 
 
-22
+22s
