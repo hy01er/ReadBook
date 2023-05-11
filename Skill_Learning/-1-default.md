@@ -23,3 +23,6 @@ jdk生成jre步骤：cmd进入jdk目录,输入命令：`bin\jlink.exe --module-p
 　 变量值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
 
 ## vim基本配置
+
+
+22
